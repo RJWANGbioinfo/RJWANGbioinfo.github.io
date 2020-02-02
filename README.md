@@ -1,1 +1,1 @@
-# Ruijia(Ray's) Wang Website
+# My personal website
