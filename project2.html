@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Package development</title>
+  <title>Bioinformatic modeling</title>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
@@ -23,16 +23,13 @@
 <div class="menu">
   <div class="menu-table flex-row-space-between">
     <div class="logo flex-row-center">
-      <a href="#">APAlyzer Package development</a>
+      <a href="#">Bioinformatic modeling of APA</a>
     </div>
     <a class="menu-button" tabindex="0" href="javascript:void(0)">
       <img src="img/menu.png">
     </a>
     <div class="menu-items flex-row-center flex-item">
       <a href="#" class="menu-index">Overview</a>
-	  <a href="https://bioconductor.org/packages/release/bioc/html/APAlyzer.html" class="menu-index">Bioconductor</a>
-	  <a href="https://bioconductor.org/packages/release/bioc/vignettes/APAlyzer/inst/doc/APAlyzer.html" class="menu-index">Documentation</a>
-      <a href="https://github.com/RJWANGbioinfo" class="menu-index">GitHub</a>
 	  <a href="index.html" class="menu-index">My website</a>
     </div>
   </div>
@@ -55,13 +52,12 @@
             <h2 class="add-top-margin">Project Overview</h2>
             <hr>
             <p class="text" align="justify">
-              <img class="image image-wrap-text max-width-400" src="images/SmallLogo.jpg">
-              Most protein-coding genes in eukaryotes produce transcripts using alternative polyadenylation (APA) sites. 
-			  APA sites located 3’UTRs and introns are dynamically regulated under different cell proliferation, 
-			  differentiation and stress conditions. RNA-seq and 3’ end sequencing data have proven effective in revealing APA changes, however, 
-			  poor PAS annotations and intrinsic limitations of de novo PAS prediction are major challenges. 
-			  To overcome these, we developed two packages, named <b><a target="_blank" href="https://github.com/RJWANGbioinfo/APAlyzer">APAlyzer</a></b> and <b><a target="_blank" href="https://github.com/RJWANGbioinfo/APAlyzer-QSr">APAlyzer-QSr</a></b> (Non-Exclusive Licenced to Admera Health) examine APA events in all genic regions, 
-			  including 3’UTRs and introns using RNA-Seq and Quant-Seq REV, respectively. 
+              <img class="image image-wrap-text max-width-400" src="images/p2_n1.png">
+				APA has been increasingly recognized as an important layer mRNA processing regulator which plays an important role in disease related process, 
+				such as tumorigenesis and neurological disorder. In this ongoing research, 
+				we have studied export factor NXF1 and CPA factor PCF11, 
+				revealing gene size-based and APA-based regulatory mechanisms. 
+				We also collaborate with a UCSD team on APA regulation in acute myeloid leukemia patients 
             </p>
           </div>
         </div>		
@@ -69,8 +65,11 @@
             <h2 class="add-top-margin">Representative publication</h2>
             <hr>
             <p class="text">
-
-						<li><b>Ruijia Wang</b> and Bin Tian: APAlyzer: a bioinformatic package for analysis of alternative polyadenylation isoforms. Bioinformatics (2020): (Under review).</li>	
+						<ol>
+						<li><b>Ruijia Wang</b>, Dinghai Zheng, Lu Wei, Qingbao Ding, Bin Tian: Regulation of intronic polyadenylation by PCF11 impacts mRNA expression of long genes. Cell Reports, 26.10 (2019):2766-2778.e2766.</li>
+						<li>Suli Chen*, <b>Ruijia Wang*</b>, Dinghai Zheng*, Heng Zhang*, Xingya Chang, Ke Wang, Wencheng Li, Jing Fan, Bin Tian, Hong Cheng: The mRNA export receptor NXF1 coordinates transcriptional dynamics, alternative polyadenylation and mRNA export. Molecular Cell, 1.74 (2019):118-131.</li>
+						<li>Dinghai Zheng*, <b>Ruijia Wang*</b>, Qingbao Ding, Tianying Wang, Bingning Xie, Lu Wei, Zhaohua Zhong, Bin Tian: Cellular stress alters 3’ UTR landscape through alternative polyadenylation and isoform-specific degradation. Nature communications 9.1 (2018): 2268.</li>
+						</ol>
 
             </p>			
         </div>		
@@ -80,10 +79,17 @@
             <h2 class="add-top-margin">Gallery</h2>
             <hr>
 
-            <img class="image center" src="images/p1_g1.png">
+            <img class="image center" src="images/p2_g1.png">
             <p class="text"  align="justify">
-			<b>Figure. APAlyzer design and example.</b><br>
-			<b>(A)</b> Overall design of APAlyzer. <b>(B)</b> Schematic of 3’UTR APA analysis. RE, relative expression between two APA regions. Common regions for analysis are in blue, and alternative regions in red. <b>(C)</b> Schematic of IPA analysis. Two IPA types are shown. Note that aUTR reads are not used for analysis. <b>(D)</b> 3’UTR APA REDs across human tissues based on the GTEx data. Data were standardized across tissues. Error bars are standard error of mean based on individual samples. <b>(E)</b> Correlation between 3’UTR APA REDs and IPA REDs across human tissues. Tissue names are indicated.
+			<b>Figure. Bioinformatic modeling on the regulation of alternative cleavage and polyadenylation (APA).</b><br>
+			<b>(A)</b>  Top features on the basis of regression analysis of gene features versus gene expression changes in siPcf11 versus siCtrl samples (total RNA). Features are sorted according to individual R2 value. Cumulative R2 value is based on a given feature together with all other features with a better individual R2 value. + and ? denote positive and negative correlations, respectively.
+			<b>(B)</b> Metagene analysis of normalized Pol II signals
+														(log2 [IP/input]) on genes based on ChIP-seq data.
+														ChIP-seq signal at each position of a gene is
+														divided by the sum of signal of the gene to
+														normalize each gene contribution to the plot. 
+														<b>(C)</b> IPA distribution maps of suppressed IPA events in Pcf11 KD cells. Color represents ratio (log2) of number of observed (obs) events to number of expected (exp) events.
+														<b>(D)</b> PAS to gene body ratio of Pol II signals in different gene size groups.
 
             </p>
           </div>
