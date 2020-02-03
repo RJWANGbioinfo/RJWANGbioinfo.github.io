@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Package development</title>
+  <title>PolyA_DB3 and evolution of PAS</title>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
@@ -23,16 +23,14 @@
 <div class="menu">
   <div class="menu-table flex-row-space-between">
     <div class="logo flex-row-center">
-      <a href="#">APAlyzer Package development</a>
+      <a href="#">PolyA_DB3 and evolution of PAS</a>
     </div>
     <a class="menu-button" tabindex="0" href="javascript:void(0)">
       <img src="img/menu.png">
     </a>
     <div class="menu-items flex-row-center flex-item">
       <a href="#" class="menu-index">Overview</a>
-	  <a href="https://bioconductor.org/packages/release/bioc/html/APAlyzer.html" class="menu-index">Bioconductor</a>
-	  <a href="https://bioconductor.org/packages/release/bioc/vignettes/APAlyzer/inst/doc/APAlyzer.html" class="menu-index">Documentation</a>
-      <a href="https://github.com/RJWANGbioinfo" class="menu-index">GitHub</a>
+	  <a href="http://exon.umdnj.edu/polya_db/v3/" class="menu-index">PolyA_DB 3</a>
 	  <a href="index.html" class="menu-index">My website</a>
     </div>
   </div>
@@ -55,22 +53,21 @@
             <h2 class="add-top-margin">Project Overview</h2>
             <hr>
             <p class="text" align="justify">
-              <img class="image image-wrap-text max-width-400" src="images/SmallLogo.jpg">
-              Most protein-coding genes in eukaryotes produce transcripts using alternative polyadenylation (APA) sites. 
-			  APA sites located 3’UTRs and introns are dynamically regulated under different cell proliferation, 
-			  differentiation and stress conditions. RNA-seq and 3’ end sequencing data have proven effective in revealing APA changes, however, 
-			  poor PAS annotations and intrinsic limitations of de novo PAS prediction are major challenges. 
-			  To overcome these, we developed two packages, named <b><a target="_blank" href="https://github.com/RJWANGbioinfo/APAlyzer">APAlyzer</a></b> and <b><a target="_blank" href="https://github.com/RJWANGbioinfo/APAlyzer-QSr">APAlyzer-QSr</a></b> (Non-Exclusive Licenced to Admera Health) examine APA events in all genic regions, 
-			  including 3’UTRs and introns using RNA-Seq and Quant-Seq REV, respectively. 
+              <img class="image image-wrap-text max-width-400" src="images/p3_n1.png">
+			In this project, I constructed a vertebrate PAS database, <b><a target="_blank" href="http://exon.umdnj.edu/polya_db/v3/">PolyA_DB 3</a></b>. 
+			This database contains PAS identified in several vertebrates, including humans, mouse, rat and chicken, drawn from over 100 datasets. 
+			In additions, through systematic bioinformatics analysis, we present the first comprehensive view of conserved cleavage and polyadenylation events in mammals. 
             </p>
           </div>
         </div>		
           <div class="flex-item flex-column">
             <h2 class="add-top-margin">Representative publication</h2>
             <hr>
-            <p class="text">
-
-						<li><b>Ruijia Wang</b> and Bin Tian: APAlyzer: a bioinformatic package for analysis of alternative polyadenylation isoforms. Bioinformatics (2020): (Under review).</li>	
+            <p class="text">			
+						<ol>
+						<li><b>Ruijia Wang</b>, Dinghai Zheng, Ghassan Yehia, Bin Tian: A compendium of conserved cleavage and polyadenylation events in mammalian genes. Genome research 28.10 (2018): 1427-1441.</li>
+						<li><b>Ruijia Wang</b>, Ram Nambiar, Dinghai Zheng, Bin Tian: PolyA_DB 3 catalogs cleavage and polyadenylation sites identified by deep sequencing in multiple genomes. Nucleic acids research 46, no. D1 (2017): D315-D319.</li>
+						</ol>
 
             </p>			
         </div>		
@@ -80,10 +77,21 @@
             <h2 class="add-top-margin">Gallery</h2>
             <hr>
 
-            <img class="image center" src="images/p1_g1.png">
+            <img class="image center" src="images/p3_g1.png">
             <p class="text"  align="justify">
-			<b>Figure. APAlyzer design and example.</b><br>
-			<b>(A)</b> Overall design of APAlyzer. <b>(B)</b> Schematic of 3’UTR APA analysis. RE, relative expression between two APA regions. Common regions for analysis are in blue, and alternative regions in red. <b>(C)</b> Schematic of IPA analysis. Two IPA types are shown. Note that aUTR reads are not used for analysis. <b>(D)</b> 3’UTR APA REDs across human tissues based on the GTEx data. Data were standardized across tissues. Error bars are standard error of mean based on individual samples. <b>(E)</b> Correlation between 3’UTR APA REDs and IPA REDs across human tissues. Tissue names are indicated.
+			<b>Figure. PolyA_DB 3 construction and genomic evolution analysis on mammal PAS.</b><br>
+			<b>(A)</b>  Schematic of PAS identification and presentation in PolyA_DB version 3.
+			<b>(B)</b> Correlation of aUTR length (left) or cUTR length (right) between human and mouse genes. 
+						A total of 6706 orthologous genes with conserved 3′ UTR APA are included. 
+						3′ UTRs are divided into aUTRs and cUTRs using the first conserved and last conserved PASs (mammal conserved). 
+						Median length value for each species and Pearson correlation coefficient are indicated. 
+														<b>(C)</b> Sequence motifs at the cleavage site, shown as sequence logos. 
+														Two scenarios are considered, as illustrated above the logos. 
+														(Left) Cleavage site is considered to be immediately after a non-A nucleoside (shown as B) and before an adenosine. 
+														(Right) Cleavage site is considered to be immediately after an adenosine and before a B.
+														<b>(D)</b> Tetramers enriched for 3’UTRs of stable or unstable transcripts.
+														<b>(E)</b> Odds ratio of miRNA target site distribution between conserved and nonconserved aUTRs for highly conserved miRNA families and moderately conserved miRNA families. miRNA
+																	conservation is defined by TargetScan (“Family Conservation” score = 1 for moderately conserved miRNAs, and = 2 for highly conserved ones).
 
             </p>
           </div>
