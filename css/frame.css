@@ -339,6 +339,14 @@ hr {
   max-width: 400px;
 }
 
+.max-width-999 {
+  max-width: 400px;
+}
+
+.imageborder{
+  border-radius: 50%;
+}
+
 .max-width-140 {
   max-width: 140px;
 }
